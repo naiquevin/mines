@@ -1,0 +1,32 @@
+a { text-decoration:none; color:#333300;  }
+a:hover { text-decoration:underline;  }
+
+#header a { font-size:36px; text-decoration:none; font-family:arial; font-weight:bold; color:#000;   }
+
+#header { height:60px; background:#CCCC99; border:none;  }
+ul#grid { float:left;  margin:50px auto; padding:0px;  list-style:none; }
+ul#grid li { float:left; width:30px; height:18px; padding:6px 0px; border-right:1px solid #606060;  border-bottom:1px solid #606060; cursor:pointer; text-align:center; font-size:12px; color:blue;  }
+ul#grid li.mine { background:#000; background:url('mines.jpg') no-repeat 0 0;  }
+ul#grid li.flag {  background:url('mines.jpg') no-repeat 0 -30px; }
+ul#grid li.no-mine { background:url('mines.jpg') no-repeat -30px 0;  }
+
+ul#grid li.clear { clear:both;  } 
+ul#grid li.btop { border-top:1px solid #606060; }
+ul#grid li.bleft { border-left:1px solid #606060; }
+
+#game-console { float:left; margin-left:60px; width:30%; background:#CCCC99; min-height:500px; text-align:center; }
+#game-console #timer , #game-console p#mine-counter { text-align:center; width:70%; margin:20px auto; height:40px; padding:10px 0px; background:#333300; color:#fff; -moz-border-radius:10px; font-size:28px; }
+#game-console input { margin:0px auto 20px; display:block; }
+#game-console input#resume-btn { display:none; }
+
+#game-console p.readme { width:70%; margin:10px auto 20px; text-align:left; font-size:12px; height:auto;   }
+
+p#game-over, p#game-won { clear:both; margin-top:10px; padding:5px 0px; background:#ff0000; font-family:arial; font-size:16px; color:#fff;  }
+p#game-won { background:#66CC33  }
+
+#right-note { float:left; margin:0 10px;  width:22%; padding:20px; font-size:12px;  }
+#right-note p { text-align:center; } 
+.bug { background:url('mines.jpg') no-repeat -30px -30px; width:30px; height:30px; float:left; margin-right:5px; display:block; }
+
+#kodeplay {  width:200px; height:124px; float:left; margin-left:0px; background:url('../images/logo.jpg') no-repeat;    }
+#kodeplay a { display:block; width:200px; height:124px;   }

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Minesweeper in Javascript</title>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="common.css" />
+    <link rel="stylesheet" type="text/css" href="mines.css" />
+    <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="mines.js"></script>
+    <script type="text/javascript" src="function.js"></script>
+  </head>
+  <body>
+    <div id="topbar">
+      <div class="wrapper">
+        <p><a href="http://vineetnaik.me/blog/">&laquo;&laquo; back to blog</a></p>
+      </div>
+    </div>
+    <div id="header">
+      <div class="wrapper">
+        <a href="">Minesweeper</a>
+      </div>
+    </div>
+    <div id="content">
+      <div class="wrapper">
+        <ul id="grid"></ul>
+        <div id="game-console">
+          <div id="timer"></div>
+          <p id="mine-counter"></p>
+          <input type="button" id="pause-btn" value="Pause Game"/>
+          <input type="button" id="resume-btn" value="Resume Game"/>
+          <input type="button" id="new-btn" value="New Game" onclick="newGame();" />
+          <p class="readme">
+            @laptop/touchpad users: if pressing both buttons together causes scrolling,
+            press one button first and then the other keeping the first one pressed. <br/><br/>
+
+            This is a javascript version of the famous windows game Minesweeper or Mines. It has been
+            coded using <a href="http://jquery.com/">Jquery</a>. Thus the image of jquery logo for mines! <br/><br/>
+
+            <span class="bug"></span>
+            Current version may still be buggy. Please report bugs / send suggestions to
+            naikvin [at] gmail [dot] com.  <br/><br/>
+          </p>
+        </div>
+        <div id="right-note">
+          <h3 style="font-size: 14px; font-weight: bold;">A few points to note:</h3>
+          <ul style="margin-top: 20px;">
+            <li>This code was written by me around 2.5 years ago
+            (2009-2010) with enthusiasm of a jquery fanboy.</li>
+            <li>Most of the code is the same although I have added
+            some text like the one you are reading now and fixed whitespace.</li>
+            <li>I don't write code as horrible as this one any longer ;-)</li>
+            <li>Right now, I am not really interested in rewriting it,
+            but may be sometime later, as an exercise for comparing
+            SLOC and efficiency.</li>
+          </ul>
+        </div>
+        <script type="text/javascript">
+          var game;
+
+          $(document).ready(function(){
+	      game = new mines();
+          });
+
+          function newGame () {
+              game.destroy();
+              $("#grid").empty();
+              $("#game-over").remove();
+              $("#game-won").remove();
+              game = null;
+              game = new mines();
+              game.resume();
+          }
+
+        </script>
+      </div>
+    </div>
+    <div id="footer">
+    </div>
+  </body>
+</html>
