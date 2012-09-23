@@ -30,6 +30,12 @@ To run this game, simply download this repo at a convenient location
 on your desktop and open index.html in some browser.
 
 
+Screenshot
+----------
+
+.. image:: screenshot.png
+
+
 Todo
 ----
 
