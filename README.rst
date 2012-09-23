@@ -33,7 +33,7 @@ on your desktop and open index.html in some browser.
 Screenshot
 ----------
 
-.. image:: screenshot.png
+.. image:: https://raw.github.com/naiquevin/mines/master/screenshot.png
 
 
 Todo
